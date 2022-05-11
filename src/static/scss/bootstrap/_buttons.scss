@@ -1,0 +1,21 @@
+.btn {
+  padding-left: 32px;
+  padding-right: 32px;
+  color: white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 4px;
+
+  &.btn-danger {
+    background-color: $red-one;
+  }
+
+  &.btn-success {
+    background-color: $green-one;
+  }
+
+  &.btn-info {
+    background: $light-blue-four;
+    background: linear-gradient(90deg, $light-blue-four 0%, $light-blue-three 50%, $light-blue-four 100%);
+  }
+}

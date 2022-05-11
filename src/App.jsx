@@ -1,21 +1,24 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="pt-20">
-      <Navbar />
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/about" component={About} exact />
-      </Switch>
-    </div>
+      <Sidebar />
+      <div className="Container--root">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/about" element={<About />} exact />
+        </Routes>
+      </div>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
