@@ -1,7 +1,5 @@
 .Sidebar--root {
   background-color: $dark-blue-one;
-  height: 100%;
-  width: 240px;
   -webkit-box-shadow: 20px 0px 15px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 20px 0px 15px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 20px 0px 15px 0px rgba(0, 0, 0, 0.5);
@@ -13,6 +11,8 @@
 
   .menu-bar {
     margin-top: 48px;
+    width: 248px;
+
     .menus {
       .menu-item {
         text-align: center;
@@ -20,8 +20,12 @@
         padding-top: 12px;
         padding-bottom: 12px;
         cursor: pointer;
+        font-size: larger;
+        font-weight: bold;
+      }
 
-        &.active {
+      .active {
+        .menu-item {
           background: rgb(37, 39, 49);
           background: linear-gradient(180deg, rgba(37, 39, 49, 1) 0%, rgba(32, 34, 43, 1) 50%);
           color: $light-blue-one;

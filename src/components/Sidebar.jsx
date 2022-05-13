@@ -1,5 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { BsBoxArrowLeft } from "react-icons/bs";
+
+const activeClassName = "active";
 
 const Sidebar = () => {
   return (
@@ -12,14 +15,30 @@ const Sidebar = () => {
       </div>
       <div className="menu-bar">
         <ul className="menus">
-          <li className="menu-item">Dashbord</li>
-          <li className="menu-item active">Wallet</li>
-          <li className="menu-item">Quick Buy</li>
-          <li className="menu-item">Exchange</li>
-          <li className="menu-item">Profile</li>
-          <li className="menu-item">Referral</li>
-          <li className="menu-item">History</li>
-          <li className="menu-item">Settings</li>
+          <NavLink to="/">
+            <li className="menu-item">Dashbord</li>
+          </NavLink>
+          <NavLink to="/wallet">
+            <li className="menu-item">Wallet</li>
+          </NavLink>
+          <NavLink to="/quick">
+            <li className="menu-item">Quick Buy</li>
+          </NavLink>
+          <NavLink to="/e">
+            <li className="menu-item">Exchange</li>
+          </NavLink>
+          <NavLink to="/p">
+            <li className="menu-item">Profile</li>
+          </NavLink>
+          <NavLink to="/r">
+            <li className="menu-item">Referral</li>
+          </NavLink>
+          <NavLink to="/h">
+            <li className="menu-item">History</li>
+          </NavLink>
+          <NavLink to="/s">
+            <li className="menu-item">Settings</li>
+          </NavLink>
         </ul>
       </div>
     </div>

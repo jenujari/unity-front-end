@@ -9,9 +9,13 @@
 			"editor.defaultFormatter": "esbenp.prettier-vscode",
 			"editor.formatOnSave": true
 		},
+		"emmet.includeLanguages": {
+			"postcss": "css"
+		},	
 		"editor.tabSize": 2,
 		"editor.insertSpaces": true,
 		"files.autoSave": "afterDelay",
-		"files.autoSaveDelay": 1000
+		"files.autoSaveDelay": 1000,
+		"postcss.validate": false
 	}
 }

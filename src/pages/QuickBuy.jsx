@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { decrement, increment } from "./../store/features/counter";
+import { decrement, increment } from "../store/features/counter";
 
-function About() {
+function QuickBuy() {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
@@ -32,4 +32,4 @@ function About() {
   );
 }
 
-export default About;
+export default QuickBuy;
