@@ -54,18 +54,6 @@
   .coin-grid {
     @apply w-full mb-12;
 
-    .left {
-      .btn-tabs {
-        @apply p-4 text-white rounded-md text-lg font-bold mr-4;
-
-        &:hover,
-        &.active {
-          color: $red-one;
-          background-color: $dark-blue-four;
-        }
-      }
-    }
-
     .grid {
       .card {
         @apply rounded-3xl p-4;

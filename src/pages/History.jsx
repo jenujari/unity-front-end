@@ -1,7 +1,6 @@
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { SiBitcoin } from "react-icons/si";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 const History = () => {
   return (
