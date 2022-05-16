@@ -1,0 +1,122 @@
+.dashbord--root {
+  .banner-group {
+    @apply rounded-[64px];
+    overflow: hidden;
+
+    .img-banner {
+      @apply inline-block w-full;
+    }
+  }
+
+  .sign-verify-group {
+    .grid {
+      .block {
+        @apply rounded-[48px] flex flex-row justify-center items-center p-8;
+
+        background: rgb(41, 107, 236);
+        background: linear-gradient(
+          180deg,
+          rgba(41, 107, 236, 1) 35%,
+          rgba(0, 0, 0, 1) 50%,
+          rgba(255, 255, 255, 1) 50%
+        );
+
+        &.sucess {
+          background: rgb(83, 211, 104);
+          background: linear-gradient(
+            180deg,
+            rgba(83, 211, 104, 1) 42%,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(255, 255, 255, 1) 50%
+          );
+        }
+
+        .icon-check {
+          color: rgba(83, 211, 104, 1);
+        }
+        .step {
+          @apply text-5xl ml-3 mr-3 font-bold;
+          color: rgba(41, 107, 236, 1);
+        }
+
+        .title {
+          @apply text-xl font-bold mt-4;
+          color: rgba(83, 211, 104, 1);
+
+          &.sucess {
+            color: #f6604e;
+          }
+        }
+      }
+    }
+  }
+
+  .coin-grid {
+    @apply w-full mb-12;
+
+    .left {
+      .btn-tabs {
+        @apply p-4 text-white rounded-md text-lg font-bold mr-4;
+
+        &:hover,
+        &.active {
+          color: $red-one;
+          background-color: $dark-blue-four;
+        }
+      }
+    }
+
+    .grid {
+      .card {
+        @apply rounded-3xl p-4;
+        background-color: $dark-blue-four;
+
+        .icon-btc {
+          @apply inline-block mr-2;
+          color: $yellow-one;
+        }
+
+        .txt-bull {
+          @apply flex items-center text-lg;
+          color: $green-one;
+        }
+
+        .txt-amt {
+          @apply text-white font-extrabold text-2xl;
+        }
+
+        .txt-label {
+          @apply text-white text-xs mt-4;
+        }
+      }
+    }
+  }
+
+  .transactions-group {
+    @apply w-full;
+
+    .btn {
+      @apply p-3 rounded-md text-lg font-bold;
+      color: $red-one;
+      background-color: $dark-blue-four;
+    }
+
+    .tbl {
+      thead {
+        tr {
+          th {
+            font-size: 18px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            font-size: 18px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

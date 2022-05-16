@@ -33,7 +33,7 @@ const Sidebar = () => {
           <NavLink to="/r">
             <li className="menu-item">Referral</li>
           </NavLink>
-          <NavLink to="/h">
+          <NavLink to="/history">
             <li className="menu-item">History</li>
           </NavLink>
           <NavLink to="/s">

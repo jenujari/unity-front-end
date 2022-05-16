@@ -207,6 +207,9 @@ const AssetBalance = ({}) => {
             </tr>
           </tbody>
         </table>
+        <button className=" bg-info text-white w-full py-4 rounded mb-12 font-bold">
+          Load more
+        </button>
       </div>
     </>
   );
