@@ -1,0 +1,28 @@
+.Authenticator-root {
+  .qr_grid {
+    grid-template-columns: 40% 60%;
+
+    .cell {
+      border: 0.5px solid #2e364d;
+    }
+  }
+
+  .otp-box {
+    @apply rounded-2xl text-center;
+    height: 128px;
+    width: 128px;
+    border: 1px solid #ff6529;
+    background-color: #21232b;
+    color: white;
+    font-size: 56px;
+
+    &:focus-visible,
+    &:focus {
+      outline: none;
+    }
+
+    &:not(:placeholder-shown) {
+      background-color: #ff6529;
+    }
+  }
+}

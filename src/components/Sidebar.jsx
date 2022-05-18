@@ -24,19 +24,19 @@ const Sidebar = () => {
           <NavLink to="/quick">
             <li className="menu-item">Quick Buy</li>
           </NavLink>
-          <NavLink to="/e">
-            <li className="menu-item">Exchange</li>
+          <NavLink to="/docs">
+            <li className="menu-item">Documents</li>
           </NavLink>
-          <NavLink to="/p">
-            <li className="menu-item">Profile</li>
-          </NavLink>
-          <NavLink to="/r">
+          <NavLink to="/referral">
             <li className="menu-item">Referral</li>
           </NavLink>
           <NavLink to="/history">
             <li className="menu-item">History</li>
           </NavLink>
-          <NavLink to="/s">
+          <NavLink to="/profile">
+            <li className="menu-item">Profile</li>
+          </NavLink>
+          <NavLink to="/2fa">
             <li className="menu-item">Settings</li>
           </NavLink>
         </ul>

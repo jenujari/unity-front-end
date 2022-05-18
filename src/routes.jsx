@@ -5,6 +5,10 @@ const Home = React.lazy(() => import("./pages/Home"));
 const Wallet = React.lazy(() => import("./pages/Wallet"));
 const Quick = React.lazy(() => import("./pages/QuickBuy"));
 const History = React.lazy(() => import("./pages/History"));
+const Docs = React.lazy(() => import("./pages/Documents"));
+const Referral = React.lazy(() => import("./pages/Referral"));
+const Authenticator = React.lazy(() => import("./pages/2fa"));
+const Profile = React.lazy(() => import("./pages/Profile"));
 
 const Routee = () => {
   return (
@@ -41,6 +45,42 @@ const Routee = () => {
         element={
           <Suspense fallback={<div>Loading...</div>}>
             <Quick />
+          </Suspense>
+        }
+        exact
+      />
+      <Route
+        path="/docs"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Docs />
+          </Suspense>
+        }
+        exact
+      />
+      <Route
+        path="/referral"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Referral />
+          </Suspense>
+        }
+        exact
+      />
+      <Route
+        path="/2fa"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Authenticator />
+          </Suspense>
+        }
+        exact
+      />
+      <Route
+        path="/profile"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Profile />
           </Suspense>
         }
         exact
