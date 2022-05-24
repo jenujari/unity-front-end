@@ -5,12 +5,14 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { toggleSidebar } from "../store/features/layout";
 import DarkLogo from "./../static/images/logo-white.svg";
+import LightLogo from "./../static/images/logo-black.svg";
 
 const activeClassName = "active";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
   const isSidebarOpen = useSelector((state) => state.layout.sidebar);
+  const isDarktheme = useSelector((state) => state.layout.darkTheme);
 
   const subToggle = React.useCallback((e) => {
     const li = e.target;
@@ -31,10 +33,15 @@ const Sidebar = () => {
   return (
     <div className={`Sidebar--root ${isSidebarOpen ? "open" : ""}`}>
       <div className="banner flex flex-row justify-start">
-        <img src={DarkLogo} alt="Unity" className="cursor-pointer w-40" />
+        {!!isDarktheme && (
+          <img src={DarkLogo} alt="Unity" className="cursor-pointer w-40" />
+        )}
+        {!isDarktheme && (
+          <img src={LightLogo} alt="Unity" className="cursor-pointer w-40" />
+        )}
         <span
           onClick={toggleSidebarCb}
-          className="inline-block cursor-pointer text-white text-3xl self-center ml-auto mr-8"
+          className="inline-block cursor-pointer color-light text-3xl self-center ml-auto mr-8"
         >
           <BsBoxArrowLeft />
         </span>

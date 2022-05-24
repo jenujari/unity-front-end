@@ -11,7 +11,7 @@
   width: 302px;
   height: 100vh;
   transition: all 0.5s ease-in-out;
-  left: -305px;
+  left: -350px;
   top: 0;
   bottom: 0;
   z-index: 50;
@@ -38,12 +38,12 @@
       .menu-item {
         font-family: "Poppins", sans-serif;
         text-align: center;
-        color: white;
         padding-top: 12px;
         padding-bottom: 12px;
         cursor: pointer;
         font-size: larger;
         font-weight: bold;
+        color: #dbe1fe;
 
         &.linked-sub-menu {
           .icon-chevron {
@@ -84,6 +84,28 @@
           background: rgb(37, 39, 49);
           background: linear-gradient(180deg, rgba(37, 39, 49, 1) 0%, rgba(32, 34, 43, 1) 50%);
           color: $light-blue-one;
+        }
+      }
+    }
+  }
+}
+
+#root.light {
+  .Sidebar--root {
+    background-color: white;
+
+    .menu-bar {
+      .menus {
+        .menu-item {
+          color: #1c1f26;
+        }
+
+        .active {
+          .menu-item {
+            @apply shadow-inner;
+            color: #1c1f26;
+            background: #fff;
+          }
         }
       }
     }

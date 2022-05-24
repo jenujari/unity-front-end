@@ -34,7 +34,7 @@
 
     .grid {
       .card {
-        @apply rounded-3xl p-4 relative overflow-hidden cursor-pointer;
+        @apply rounded-3xl p-4 relative shadow-2xl overflow-hidden cursor-pointer;
         background-color: $dark-blue-four;
 
         .icon-btc {
@@ -45,14 +45,6 @@
         .txt-bull {
           @apply flex items-center text-lg;
           color: $green-one;
-        }
-
-        .txt-amt {
-          @apply text-white font-extrabold text-2xl;
-        }
-
-        .txt-label {
-          @apply text-white text-xs mt-4;
         }
 
         .quik-buy {
@@ -71,10 +63,7 @@
   }
 
   .transactions-group {
-    @apply w-full;
-
     .btn {
-      @apply p-3 rounded-md text-lg font-bold;
       color: $red-one;
       background-color: $dark-blue-four;
     }
@@ -94,6 +83,24 @@
             font-weight: normal;
           }
         }
+      }
+    }
+  }
+}
+
+#root.light {
+  .dashbord--root {
+    .coin-grid {
+      .grid {
+        .card {
+          background-color: #fff;
+        }
+      }
+    }
+    .transactions-group {
+      .btn {
+        color: $red-two;
+        background-color: #fff;
       }
     }
   }

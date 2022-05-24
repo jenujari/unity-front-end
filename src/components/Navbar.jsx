@@ -6,7 +6,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { BsBell, BsChevronDown } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 
-import { toggleSidebar } from "../store/features/layout";
+import { toggleSidebar, toggleTheme } from "../store/features/layout";
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -18,33 +18,46 @@ function Navbar() {
     []
   );
 
+  const toggleThemeCb = React.useCallback(() => dispatch(toggleTheme()), []);
+
   return (
     <div className="Navbar--root">
       <div className="w-full flex flex-row justify-between">
         <div className="left flex flex-row justify-start items-center">
           <GiHamburgerMenu
             onClick={toggleSidebarCb}
-            className="icon-ham cursor-pointer"
+            className="icon-ham cursor-pointer color-light"
           />
           <div className="search-group relative">
             <input
-              className="txt-search font-montserrat"
+              className="txt-search font-bold p-3 rounded-lg bg-transparent font-montserrat color-light"
               type="text"
               placeholder="Search"
             />
-            <RiSearchLine className="serch-icon" />
+            <RiSearchLine className="serch-icon color-light absolute  text-3xl" />
           </div>
         </div>
         <div className="right flex flex-row justify-end items-center">
-          <CgArrowDownR className="icon-down" />
-          <span className="exch-btn font-montserrat">
+          <CgArrowDownR className="text-xl color-light" />
+          <span
+            className="color-light text-base p-4 flex flex-row justify-between 
+            items-center font-bold border border-blue-500 rounded-lg ml-8 cursor-pointer
+            font-montserrat"
+          >
             Eng/USD
-            <AiOutlinePlus className="icon-plus" />
+            <AiOutlinePlus className="ml-3" />
           </span>
-          <BsBell className="icon-bell" />
-          <div className="profile-drp">
-            <img src={profileImgSrc} alt="profile" />
-            <BsChevronDown className="icon-down" />
+          <BsBell className="color-light text-3xl ml-8 cursor-pointer" />
+          <div
+            onClick={toggleThemeCb}
+            className="profile-drp ml-8 relative mr-12 cursor-pointer"
+          >
+            <img
+              src={profileImgSrc}
+              alt="profile"
+              className="inline-block h-12 w-12 rounded-full ring-2"
+            />
+            <BsChevronDown className="icon-down text-xl absolute" />
           </div>
         </div>
       </div>

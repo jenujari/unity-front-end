@@ -17,14 +17,17 @@
 #root {
   min-width: 100vw;
   min-height: 100vh;
+  background-color: $dark-blue;
 }
 
 body {
-  background-color: $dark-blue;
-
   * {
     font-family: "Roboto", sans-serif;
   }
+}
+
+#root.light {
+  background-color: #f5f8fd;
 }
 
 .Container--root {

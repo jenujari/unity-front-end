@@ -1,5 +1,6 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Wallet = React.lazy(() => import("./pages/Wallet"));
@@ -11,6 +12,21 @@ const Authenticator = React.lazy(() => import("./pages/2fa"));
 const Profile = React.lazy(() => import("./pages/Profile"));
 
 const Routee = () => {
+  const isDarkTheme = useSelector((state) => state.layout.darkTheme);
+
+  useEffect(() => {
+    const rootEle = document.getElementById("root");
+    if (rootEle) {
+      if (isDarkTheme && rootEle.classList.contains("light")) {
+        rootEle.classList.remove("light");
+      }
+
+      if (!isDarkTheme && !rootEle.classList.contains("light")) {
+        rootEle.classList.add("light");
+      }
+    }
+  }, [isDarkTheme]);
+
   return (
     <Routes>
       <Route

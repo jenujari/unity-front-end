@@ -8,9 +8,9 @@ import DashBanner01 from "./../static/images/dash_banner_1.jpg";
 function Home() {
   return (
     <div className="main-container dashbord--root">
-      {/* <div className="w-full banner-group mb-12">
+      <div className="w-full banner-group mb-12">
         <img className="img-banner" src={DashBanner01} alt="banner" />
-      </div> */}
+      </div>
       <SignupVerify />
       <CoinGrid />
       <TransactinTable />
@@ -107,7 +107,7 @@ const CoinGrid = () => {
       <div className="grid grid-cols-3 gap-6 mb-6">
         {[...Array(12).keys()].map((i) => (
           <div key={i} className="card">
-            <div className="w-full font-roboto font-bold text-center text-3xl mt-12 text-white">
+            <div className="w-full font-roboto font-bold text-center text-3xl mt-12 color-light">
               <SiBitcoin className="icon-btc" />
               Bitcoin (BTC)
             </div>
@@ -116,8 +116,10 @@ const CoinGrid = () => {
                 +9.06%
                 <BsArrowUp className="ml-1" />
               </p>
-              <p className="txt-amt font-roboto">$54,000,78.00</p>
-              <p className="txt-label font-roboto">Market Cap</p>
+              <p className=" font-extrabold text-2xl color-light font-roboto">
+                $54,000,78.00
+              </p>
+              <p className="color-light text-xs mt-4 font-roboto">Market Cap</p>
             </div>
             <button className="quik-buy bg-info text-white font-bold text-lg left-0 w-full absolute py-3">
               Quick Buy
@@ -134,8 +136,8 @@ const CoinGrid = () => {
 
 const TransactinTable = () => {
   return (
-    <div className="transactions-group">
-      <button className="btn font-bold font-roboto">
+    <div className="transactions-group w-full">
+      <button className="btn px-8 py-4 rounded-md text-lg font-bold font-roboto">
         Wallets Transactions
       </button>
       <table className="tbl w-full">
