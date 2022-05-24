@@ -17,24 +17,26 @@
 #root {
   min-width: 100vw;
   min-height: 100vh;
-  @apply flex flex-row justify-start content-start;
 }
 
 body {
   background-color: $dark-blue;
-}
 
-.Container--root {
-  flex-grow: 1;
-
-  .main-container {
-    padding-left: 48px;
-    padding-right: 48px;
+  * {
+    font-family: "Roboto", sans-serif;
   }
 }
 
-.title {
-  color: $light-blue-two;
+.Container--root {
+  @apply w-full h-full;
+  background-image: url("./images/5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .main-container {
+    @apply px-12 w-full;
+  }
 }
 
 .card-container {

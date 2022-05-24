@@ -15,6 +15,10 @@
   color: $yellow-one;
 }
 
+.color-light {
+  color: #dbe1fe;
+}
+
 .cst-btn {
   padding-left: 32px;
   padding-right: 32px;
@@ -28,6 +32,7 @@
 
 .btn-tabs {
   @apply p-4 text-white rounded-md text-lg font-bold mr-4;
+  font-family: "Roboto", sans-serif;
 
   &:hover,
   &.active {
@@ -40,6 +45,10 @@
   @apply text-white;
   border-collapse: separate;
   border-spacing: 0 32px;
+
+  * {
+    font-family: "Montserrat", sans-serif;
+  }
 
   thead {
     tr {

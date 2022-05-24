@@ -9,45 +9,23 @@
   }
 
   .sign-verify-group {
-    .grid {
-      .block {
-        @apply rounded-[48px] flex flex-row justify-center items-center p-8;
-
-        background: rgb(41, 107, 236);
-        background: linear-gradient(
-          180deg,
-          rgba(41, 107, 236, 1) 35%,
-          rgba(0, 0, 0, 1) 50%,
-          rgba(255, 255, 255, 1) 50%
-        );
-
-        &.sucess {
-          background: rgb(83, 211, 104);
-          background: linear-gradient(
-            180deg,
-            rgba(83, 211, 104, 1) 42%,
-            rgba(0, 0, 0, 1) 50%,
-            rgba(255, 255, 255, 1) 50%
-          );
-        }
-
-        .icon-check {
-          color: rgba(83, 211, 104, 1);
-        }
-        .step {
-          @apply text-5xl ml-3 mr-3 font-bold;
-          color: rgba(41, 107, 236, 1);
-        }
-
-        .title {
-          @apply text-xl font-bold mt-4;
-          color: rgba(83, 211, 104, 1);
-
-          &.sucess {
-            color: #f6604e;
-          }
-        }
-      }
+    .text-duo {
+      background: linear-gradient(180deg, rgba(124, 115, 241, 1) 22%, rgba(230, 119, 173, 1) 88%);
+      font-size: 148px;
+      font-weight: 700;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .grad_border {
+      background: linear-gradient(180deg, rgba(124, 115, 241, 1) 22%, rgba(230, 119, 173, 1) 88%);
+      height: 12px;
+      width: 98px;
+    }
+    .next-div {
+      background: linear-gradient(180deg, rgba(124, 115, 241, 1) 22%, rgba(230, 119, 173, 1) 88%);
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
     }
   }
 
@@ -56,7 +34,7 @@
 
     .grid {
       .card {
-        @apply rounded-3xl p-4;
+        @apply rounded-3xl p-4 relative overflow-hidden cursor-pointer;
         background-color: $dark-blue-four;
 
         .icon-btc {
@@ -75,6 +53,18 @@
 
         .txt-label {
           @apply text-white text-xs mt-4;
+        }
+
+        .quik-buy {
+          font-family: "Roboto", sans-serif;
+          bottom: -54px;
+          transition: 0.1s ease-in-out;
+        }
+
+        &:hover {
+          .quik-buy {
+            bottom: 0px;
+          }
         }
       }
     }

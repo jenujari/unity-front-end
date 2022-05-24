@@ -1,7 +1,14 @@
 .Navbar--root {
   padding: 48px;
+  width: 100%;
 
   .left {
+    .icon-ham {
+      color: white;
+      font-size: 32px;
+      margin-right: 16px;
+    }
+
     .search-group {
       .txt-search {
         @apply text-white font-bold p-3 rounded-lg bg-transparent;

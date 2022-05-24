@@ -1,6 +1,6 @@
 import React from "react";
 import { SiBitcoin } from "react-icons/si";
-import { BiCheckCircle } from "react-icons/bi";
+import { CgArrowLongRightE } from "react-icons/cg";
 import { BsThreeDotsVertical, BsChevronDown, BsArrowUp } from "react-icons/bs";
 
 import DashBanner01 from "./../static/images/dash_banner_1.jpg";
@@ -8,9 +8,9 @@ import DashBanner01 from "./../static/images/dash_banner_1.jpg";
 function Home() {
   return (
     <div className="main-container dashbord--root">
-      <div className="w-full banner-group mb-12">
+      {/* <div className="w-full banner-group mb-12">
         <img className="img-banner" src={DashBanner01} alt="banner" />
-      </div>
+      </div> */}
       <SignupVerify />
       <CoinGrid />
       <TransactinTable />
@@ -22,34 +22,74 @@ export default Home;
 
 const SignupVerify = () => {
   return (
-    <div className="card-container sign-verify-group mb-12">
-      <div className="grid grid-cols-3 gap-4">
-        {[...Array(3).keys()].map((i) => (
-          <div key={i} className={`block ${i !== 2 ? "sucess" : ""}`}>
-            <div className="text-center">
-              <div className="rounded-full p-4 bg-white inline-flex mt-8">
-                {i !== 2 ? (
-                  <BiCheckCircle className="text-6xl icon-check" />
-                ) : (
-                  <span className="step">{i + 1}</span>
-                )}
-              </div>
-              <h3 className={`title ${i == 2 ? "sucess" : ""}`}>
-                {i == 0 && "Sign Up!"}
-                {i == 1 && "Verify"}
-                {i == 2 && "Start Earning!"}
-              </h3>
-            </div>
+    <>
+      <p className="color-light font-roboto text-5xl font-bold mb-2">
+        How it works
+      </p>
+      <p className="color-light font-roboto text-2xl font-light">
+        Get Started with 3 easy steps
+      </p>
+      <div className="sign-verify-group mb-12 flex">
+        <div>
+          <p className="font-montserrat text-duo">1</p>
+          <p className="color-light font-roboto text-3xl mb-4">Sign up</p>
+          <div className="grad_border  mb-4"></div>
+          <p
+            style={{ lineHeight: "32px" }}
+            className="color-light font-montserrat text-lg font-bold"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+            quas perspiciatis ad atque qui similique laboriosam eum hic! Iste
+            facilis suscipit corporis ea optio odit nulla repellat maiores animi
+            necessitatibus?
+          </p>
+        </div>
+        <div className="grid place-content-center ml-4 mr-12">
+          <div className="next-div grid place-content-center">
+            <CgArrowLongRightE className="text-white text-4xl" />
           </div>
-        ))}
+        </div>
+        <div>
+          <p className="font-montserrat text-duo">2</p>
+          <p className="color-light font-roboto text-3xl mb-4">Verify</p>
+          <div className="grad_border  mb-4"></div>
+          <p
+            style={{ lineHeight: "32px" }}
+            className="color-light font-montserrat text-lg font-bold"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+            quas perspiciatis ad atque qui similique laboriosam eum hic! Iste
+            facilis suscipit corporis ea optio odit nulla repellat maiores animi
+            necessitatibus?
+          </p>
+        </div>
+        <div className="grid place-content-center ml-4 mr-12">
+          <div className="next-div grid place-content-center">
+            <CgArrowLongRightE className="text-white text-4xl" />
+          </div>
+        </div>
+        <div>
+          <p className="font-montserrat text-duo">3</p>
+          <p className="color-light font-roboto text-3xl mb-4">Start Earning</p>
+          <div className="grad_border  mb-4"></div>
+          <p
+            style={{ lineHeight: "32px" }}
+            className="color-light font-montserrat text-lg font-bold"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+            quas perspiciatis ad atque qui similique laboriosam eum hic! Iste
+            facilis suscipit corporis ea optio odit nulla repellat maiores animi
+            necessitatibus?
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
 const CoinGrid = () => {
   return (
-    <div className="coin-grid">
+    <div className="coin-grid pt-12">
       <div className="flex flex-row justify-between w-full mb-8">
         <div className="left">
           <button className="btn-tabs active">Core Assets</button>
@@ -58,7 +98,7 @@ const CoinGrid = () => {
           <button className="btn-tabs">Tools</button>
         </div>
         <div className="right">
-          <button className="text-white flex items-center">
+          <button className="text-white font-roboto font-bold flex items-center">
             Market Cap
             <BsChevronDown className="ml-2" />
           </button>
@@ -67,22 +107,25 @@ const CoinGrid = () => {
       <div className="grid grid-cols-3 gap-6 mb-6">
         {[...Array(12).keys()].map((i) => (
           <div key={i} className="card">
-            <div className="w-full text-center text-3xl text-white">
+            <div className="w-full font-roboto font-bold text-center text-3xl mt-12 text-white">
               <SiBitcoin className="icon-btc" />
-              Bitcon (BTC)
+              Bitcoin (BTC)
             </div>
             <div className="w-full mt-[118px] mb-[68px] grid place-items-center">
-              <p className="txt-bull">
+              <p className="txt-bull font-roboto">
                 +9.06%
                 <BsArrowUp className="ml-1" />
               </p>
-              <p className="txt-amt">$54,000,78.00</p>
-              <p className="txt-label">Market Cap</p>
+              <p className="txt-amt font-roboto">$54,000,78.00</p>
+              <p className="txt-label font-roboto">Market Cap</p>
             </div>
+            <button className="quik-buy bg-info text-white font-bold text-lg left-0 w-full absolute py-3">
+              Quick Buy
+            </button>
           </div>
         ))}
       </div>
-      <button className=" bg-info text-white w-full py-4 rounded mb-12 font-bold">
+      <button className=" bg-info text-white w-full font-poppins text-lg py-4 rounded mb-12 font-bold">
         Discover more assets
       </button>
     </div>
@@ -92,7 +135,9 @@ const CoinGrid = () => {
 const TransactinTable = () => {
   return (
     <div className="transactions-group">
-      <button className="btn">Wallets Transactions</button>
+      <button className="btn font-bold font-roboto">
+        Wallets Transactions
+      </button>
       <table className="tbl w-full">
         <thead>
           <tr>
@@ -190,7 +235,7 @@ const TransactinTable = () => {
           </tr>
         </tbody>
       </table>
-      <button className=" bg-info text-white w-full py-4 rounded mb-12 font-bold">
+      <button className=" bg-info text-white w-full font-poppins text-lg py-4 rounded mb-12 font-bold">
         Discover more assets
       </button>
     </div>

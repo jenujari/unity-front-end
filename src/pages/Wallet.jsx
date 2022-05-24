@@ -18,11 +18,11 @@ export default Wallet;
 const WalletOverview = ({}) => {
   return (
     <>
-      <h3 className="title text-3xl mb-5">Overview</h3>
+      <h3 className="color-light font-bold text-3xl mb-5">Overview</h3>
       <div className="card-container flex flex-row justify-between mb-12">
         <div className="left">
-          <h6 className="title text-md">Total Balance</h6>
-          <h3 className="title text-4xl font-bold mt-3 inline-flex">
+          <h6 className="color-light text-md">Total Balance</h6>
+          <h3 className="color-light text-4xl font-bold mt-3 inline-flex">
             0.16231428
             <span className="ml-3 bit-icon">
               <SiBitcoin />
@@ -45,7 +45,7 @@ const WalletOverview = ({}) => {
 const AccountBalance = ({}) => {
   return (
     <>
-      <h3 className="title text-3xl mb-5">Account Balances</h3>
+      <h3 className="color-light font-bold text-3xl mb-5">Account Balances</h3>
       <div className="card-container mb-12">
         <div className="balances grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="card-block balance-margin">
@@ -121,7 +121,7 @@ const AccountBalance = ({}) => {
 const AssetBalance = ({}) => {
   return (
     <>
-      <h3 className="title text-3xl mb-5">Asset Balances</h3>
+      <h3 className="color-light font-bold text-3xl mb-5">Asset Balances</h3>
       <div className="card-container mb-12">
         <table className="tbl w-full">
           <thead>
@@ -207,7 +207,7 @@ const AssetBalance = ({}) => {
             </tr>
           </tbody>
         </table>
-        <button className=" bg-info text-white w-full py-4 rounded mb-12 font-bold">
+        <button className=" bg-info text-white font-poppins w-full py-4 rounded mb-12 font-bold">
           Load more
         </button>
       </div>
