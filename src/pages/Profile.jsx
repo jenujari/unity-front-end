@@ -3,19 +3,19 @@ import React from "react";
 const Profile = () => {
   return (
     <div className="Profile-root main-container w-full">
-      <h3 className="title text-4xl font-bold mb-12">Your Avatar</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">Your Avatar</h3>
       <div className="card-container mb-12">
         <div className="flex justify-start items-center">
           <div className="rounded-full w-40 h-40 bg-blue-700"></div>
-          <button className="p-4 w-40 ml-8 rounded-lg border border-[#3f43dd] text-white">
+          <button className="p-4 w-40 ml-8 font-bold rounded-lg border border-[#3f43dd] text-white">
             Withdraw
           </button>
-          <button className="p-4 w-40 ml-8 rounded-lg bg-[#535353] text-white">
+          <button className="p-4 w-40 ml-8 font-bold rounded-lg bg-[#535353] text-white">
             Deposit
           </button>
         </div>
       </div>
-      <h3 className="title text-4xl font-bold mb-12">Your Details</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">Your Details</h3>
       <div className="card-container mb-12">
         <div className="grid grid-cols-2 gap-x-4 gap-y-10">
           <div>
@@ -37,7 +37,7 @@ const Profile = () => {
             <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
           </div>
           <div>
-            <button className="bg-info text-white float-left h-12 w-32 rounded">
+            <button className="bg-info font-bold text-white float-left py-6 px-16 rounded">
               Update Profile
             </button>
           </div>

@@ -5,7 +5,7 @@ import { BsChevronDown } from "react-icons/bs";
 export default function Documents() {
   return (
     <div className="main-container Documents--root w-full">
-      <h3 className="title text-4xl font-bold mb-12">My Documents</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">My Documents</h3>
       <div className="card-container mb-12">
         <div className="h-48 grid items-center wi-full">
           <p className="text-white text-center italic font-light">
@@ -13,7 +13,9 @@ export default function Documents() {
           </p>
         </div>
       </div>
-      <h3 className="title text-4xl font-bold mb-12">Upload New Document</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">
+        Upload New Document
+      </h3>
       <div className="w-full grid docfrom-grid gap-3 mb-12">
         <div className="card-container p-4">
           <div className="btn-drp-grp mb-12">
@@ -99,45 +101,51 @@ export default function Documents() {
           </ul>
         </div>
       </div>
-      <h3 className="title text-4xl font-bold mb-12">Uploaded Documents</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">
+        Uploaded Documents
+      </h3>
       <div className="card-container mb-12">
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           Please provide a clear color copy of both sides of a non-expired and
           valid ID document indicating your Full Name and Date of Birth as
           provided in your application.
         </p>
 
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           Please see below a list of all acceptable documents
         </p>
 
-        <p className="text-[#727272] text-lg mb-12">- Passport</p>
-        <p className="text-[#727272] text-lg mb-12">- Identity Card</p>
-        <p className="text-[#727272] text-lg mb-12">- Proof of Address</p>
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">- Passport</p>
+        <p className="text-[#727272] text-lg font-medium mb-12">
+          - Identity Card
+        </p>
+        <p className="text-[#727272] text-lg font-medium mb-12">
+          - Proof of Address
+        </p>
+        <p className="text-[#727272] text-lg font-medium mb-12">
           Please provide a clear copy of Proof of Address stating your full
           name, address and issuing authority, issued within the last three(3)
           months
         </p>
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           The address should match the one used during your application.
         </p>
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           You are kindly advised to provide colored full-page documents. All
           information such as issuing date, issuer, billing name, and address
           should be clearly visible. You may hide any confidential information
           should as your personal account number or any transaction history.
         </p>
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           List of acceptable documents
         </p>
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           - Utility bill such as electricity, gas, water
         </p>
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           - Bank/Credit Card Statement
         </p>
-        <p className="text-[#727272] text-lg mb-12">
+        <p className="text-[#727272] text-lg font-medium mb-12">
           - Local Authority Tax Bill
         </p>
       </div>

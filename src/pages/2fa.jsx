@@ -36,7 +36,7 @@ const Authenticator = () => {
 
   return (
     <div className="Authenticator-root main-container w-full">
-      <h3 className="title text-4xl font-bold mb-12">Scan Code</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">Scan Code</h3>
       <div className="card-container mb-12">
         <div className="grid qr_grid gap-4">
           <div className="cell p-4 rounded-xl grid place-content-center">
@@ -56,7 +56,9 @@ const Authenticator = () => {
           </div>
         </div>
       </div>
-      <h3 className="title text-4xl font-bold mb-12">Enter Six-Digit Code</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">
+        Enter Six-Digit Code
+      </h3>
       <div className="card-container mb-12">
         <div id="otp" className="grid grid-cols-6 gap-3">
           <input

@@ -4,12 +4,12 @@ import { MdOutlineContentCopy } from "react-icons/md";
 const Referral = ({}) => {
   return (
     <div className="Referral-root main-container w-full">
-      <h3 className="title text-4xl font-bold mb-12">Your Referral</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">Your Referral</h3>
       <div className="card-container mb-12">
-        <h3 className="text-white text-xl mb-12">
+        <h3 className="color-light font-bold text-xl mb-12">
           Invite your friends to Exintic and Earn 15% on Friends trading fees
         </h3>
-        <button className="bg-[#47c17a] text-white rounded py-2 w-52">
+        <button className="bg-[#47c17a] text-white font-bold rounded py-2 w-52">
           Your Referral Link
         </button>
 
@@ -20,7 +20,7 @@ const Referral = ({}) => {
           </p>
         </div>
       </div>
-      <h3 className="title text-4xl font-bold mb-12">Rewards</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">Rewards</h3>
       <div className="card-container mb-12">
         <p className="text-white text-xl">Total Rewards</p>
         <div className="w-full flex mt-4 bb pb-8">

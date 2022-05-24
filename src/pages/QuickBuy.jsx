@@ -5,7 +5,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 function QuickBuy() {
   return (
     <div className="Quickbuy-root main-container w-full">
-      <h3 className="title text-4xl font-bold mb-12">
+      <h3 className="color-light text-4xl font-bold mb-12">
         Buy and sell cryptocurrencies in click!
       </h3>
       <div className="flex flex-row justify-between w-full mb-12">
@@ -15,7 +15,7 @@ function QuickBuy() {
           <button className="btn-tabs">Losers</button>
         </div>
         <div className="right">
-          <button className="text-white flex text-lg items-center">
+          <button className="color-light font-bold rounded-2xl hover:drop-shadow-xl hover:border p-6 flex text-lg items-center">
             Last 24 hour
             <BsChevronDown className="ml-2" />
           </button>
@@ -30,7 +30,7 @@ function QuickBuy() {
       <div className="w-full mb-16 grid grid-cols-5 gap-4">
         {currencyList.map((c, i) => (
           <div className="card relative overflow-hidden" key={i}>
-            <div className="w-full text-center text-3xl mt-6 text-white">
+            <div className="w-full text-center font-bold text-3xl mt-6 text-white">
               {/* coin icon will be here */}
               {c.title}
             </div>

@@ -5,7 +5,7 @@ import { SiBitcoin } from "react-icons/si";
 const History = () => {
   return (
     <div className="main-container History--root w-full">
-      <h3 className="title text-4xl font-bold mb-12">History</h3>
+      <h3 className="color-light text-4xl font-bold mb-12">History</h3>
       <div className="flex flex-row justify-between w-full mb-12">
         <div className="left">
           <button className="btn-tabs active">All</button>
@@ -256,7 +256,7 @@ const History = () => {
             </tr>
           </tbody>
         </table>
-        <button className=" bg-info text-white w-full py-4 rounded mb-12 font-bold">
+        <button className=" bg-info text-white font-poppins text-lg w-full py-4 rounded mb-12 font-bold">
           Load more
         </button>
       </div>
