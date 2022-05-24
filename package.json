@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.5",
     "@reduxjs/toolkit": "^1.8.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.3",
@@ -14,6 +15,7 @@
     "react": "18",
     "react-dom": "18",
     "react-icons": "^4.3.1",
+    "react-popper": "^2.3.0",
     "react-redux": "^8.0.1",
     "react-router-dom": "6"
   },

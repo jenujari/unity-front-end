@@ -1,6 +1,12 @@
 import React from "react";
 import { IoDocumentsSharp } from "react-icons/io5";
-import { BsChevronDown } from "react-icons/bs";
+
+import { Input, Dropdown } from "./../components/common";
+
+const drpOptions = [
+  { id: "Id", value: "Proof of ID" },
+  { id: "Address", value: "Proof of Address" },
+];
 
 export default function Documents() {
   return (
@@ -19,10 +25,7 @@ export default function Documents() {
       <div className="w-full grid docfrom-grid gap-3 mb-12">
         <div className="card-container p-4">
           <div className="btn-drp-grp mb-12">
-            <button className=" text-white text-left w-80 px-6 py-4 rounded-xl bg-[#232531] shadow-lg">
-              Proof of ID
-              <BsChevronDown className="float-right mt-1" />
-            </button>
+            <Dropdown options={drpOptions} placeholder="Please Select" />
           </div>
           <div className="grid grid-cols-2 gap-6">
             <div className="flex flex-col justify-start items-center">
@@ -47,25 +50,25 @@ export default function Documents() {
                 <label className="text-white text-lg font-bold">
                   Document Number
                 </label>
-                <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+                <Input className="mt-5" />
               </div>
               <div>
                 <label className="text-white text-lg font-bold">
                   Country of Issue
                 </label>
-                <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+                <Input className="mt-5" />
               </div>
               <div>
                 <label className="text-white text-lg font-bold">
                   Date of Issue
                 </label>
-                <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+                <Input className="mt-5" />
               </div>
               <div>
                 <label className="text-white text-lg font-bold">
                   Date of Expiry
                 </label>
-                <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+                <Input className="mt-5" />
               </div>
               <div>
                 <p className="text-white italic text-sm">

@@ -19,6 +19,37 @@
   color: #dbe1fe;
 }
 
+.popper-container {
+  padding: 20px;
+
+  .popper-arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: -25px; // we account for the PopperContainer padding
+      left: 0;
+      transform: rotate(45deg);
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &[data-popper-placement^="top"] > .popper-arrow {
+    bottom: -30px;
+
+    &:after {
+      top: -25px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
 .cst-btn {
   padding-left: 32px;
   padding-right: 32px;

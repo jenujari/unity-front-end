@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Input } from "./../components/common";
+
 const Profile = () => {
   return (
     <div className="Profile-root main-container w-full">
@@ -22,19 +24,19 @@ const Profile = () => {
             <label className="text-white text-lg font-bold">
               Your Full Name
             </label>
-            <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+            <Input className="mt-5" />
           </div>
           <div>
             <label className="text-white text-lg font-bold">Display Name</label>
-            <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+            <Input className="mt-5" />
           </div>
           <div>
             <label className="text-white text-lg font-bold">Email</label>
-            <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+            <Input className="mt-5" />
           </div>
           <div>
             <label className="text-white text-lg font-bold">Location</label>
-            <input className="mt-5 h-12 w-full rounded-xl bg-[#232531] shadow-md" />
+            <Input className="mt-5" />
           </div>
           <div>
             <button className="bg-info font-bold text-white float-left py-6 px-16 rounded">
