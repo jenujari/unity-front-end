@@ -7,7 +7,7 @@ const INPUT_CLASS = [
   "p-3",
   "text-white",
   "text-xl",
-  "bg-[#232531]",
+  "input-bg",
 ];
 
 const Input = ({ type = "text", className = "", ...props }) => {

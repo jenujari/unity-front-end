@@ -1,6 +1,19 @@
 .Navbar--root {
   padding: 48px;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1080px;
+
+  @include tab {
+    @apply px-4;
+    width: 100%;
+    margin: 0;
+  }
+
+  @include mob {
+    @apply p-4;
+    width: 100%;
+    margin: 0;
+  }
 
   .left {
     .icon-ham {
@@ -12,15 +25,29 @@
       .txt-search {
         font-size: 22px;
         padding-right: 52px;
+
+        @include tab {
+          max-width: 220px;
+        }
       }
       .serch-icon {
         top: 14px;
         right: 12px;
       }
+
+      @include mob {
+        display: none;
+      }
     }
   }
 
   .right {
+    .btn-exchange {
+      @include mob {
+        display: none;
+      }
+    }
+
     .profile-drp {
       img {
         @apply ring-white;

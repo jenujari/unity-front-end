@@ -5,16 +5,16 @@ import { SiBitcoin } from "react-icons/si";
 const History = () => {
   return (
     <div className="main-container History--root w-full">
-      <h3 className="color-light text-4xl font-bold mb-12">History</h3>
+      <h3 className="color-light  section-title  font-bold ">History</h3>
       <div className="flex flex-row justify-between w-full mb-12">
-        <div className="left">
+        <div className="left flex flex-col md:flex-row">
           <button className="btn-tabs active">All</button>
           <button className="btn-tabs">Withdrawals</button>
           <button className="btn-tabs">Deposit</button>
           <button className="btn-tabs">Bank Withdraws</button>
         </div>
         <div className="right">
-          <button className="text-white flex text-lg items-center">
+          <button className="color-light flex text-lg items-center">
             open
             <BsChevronDown className="ml-2" />
           </button>
@@ -33,225 +33,42 @@ const History = () => {
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td data-title="Asset">
                 <div className="flex flex-row justify-start items-center">
                   <SiBitcoin className="color-warning text-2xl" />
-                  <span className="text-xl font-medium text-white ml-3">
+                  <span className="text-base font-medium color-light ml-3">
                     USDT
                   </span>
                 </div>
               </td>
-              <td>
+              <td data-title="Date">
                 <span className="text-sm font-extralight">
                   Jan 17th, 2022 10:56:41
                 </span>
               </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
+              <td className="text-left md:text-right" data-title="Orders">
+                <p className="color-light text-left md:text-right font-bold text-lg">
+                  0.2785689852 BTC
+                </p>
+                <p className="text-gray-500 text-left md:text-right text-base">
+                  10,098.36 USD
+                </p>
+              </td>
+              <td className="text-left md:text-right" data-title="Amounts">
+                <h5 className="color-light text-left md:text-right font-bold text-lg">
                   0.2785689852 BTC
                 </h5>
-                <h5 className="text-gray-500 text-right text-xl">
+                <h5 className="text-gray-500 text-left md:text-right text-base">
                   10,098.36 USD
                 </h5>
               </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td>
-                <h5 className="text-white text-right">jhgde8723gfwe9f934</h5>
-                <h5 className="text-gray-500  text-right">
+              <td data-title="Address">
+                <p className="color-light text-left md:text-right text-base whitespace-normal break-all">
+                  jhgde8723gfwe9f934
+                </p>
+                <p className="text-gray-500  text-left md:text-right text-base whitespace-normal break-all">
                   asdfawr23456ergs4356
-                </h5>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div className="flex flex-row justify-start items-center">
-                  <SiBitcoin className="color-warning text-2xl" />
-                  <span className="text-xl font-medium text-white ml-3">
-                    ETH
-                  </span>
-                </div>
-              </td>
-              <td>
-                <span className="text-sm font-extralight">
-                  Jan 17th, 2022 10:56:41
-                </span>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td>
-                <h5 className="text-white text-right">jhgde8723gfwe9f934</h5>
-                <h5 className="text-gray-500  text-right">
-                  asdfawr23456ergs4356
-                </h5>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div className="flex flex-row justify-start items-center">
-                  <SiBitcoin className="color-warning text-2xl" />
-                  <span className="text-xl font-medium text-white ml-3">
-                    USDT
-                  </span>
-                </div>
-              </td>
-              <td>
-                <span className="text-sm font-extralight">
-                  Jan 17th, 2022 10:56:41
-                </span>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td>
-                <h5 className="text-white text-right">jhgde8723gfwe9f934</h5>
-                <h5 className="text-gray-500  text-right">
-                  asdfawr23456ergs4356
-                </h5>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div className="flex flex-row justify-start items-center">
-                  <SiBitcoin className="color-warning text-2xl" />
-                  <span className="text-xl font-medium text-white ml-3">
-                    ETH
-                  </span>
-                </div>
-              </td>
-              <td>
-                <span className="text-sm font-extralight">
-                  Jan 17th, 2022 10:56:41
-                </span>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td>
-                <h5 className="text-white text-right">jhgde8723gfwe9f934</h5>
-                <h5 className="text-gray-500  text-right">
-                  asdfawr23456ergs4356
-                </h5>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div className="flex flex-row justify-start items-center">
-                  <SiBitcoin className="color-warning text-2xl" />
-                  <span className="text-xl font-medium text-white ml-3">
-                    USDT
-                  </span>
-                </div>
-              </td>
-              <td>
-                <span className="text-sm font-extralight">
-                  Jan 17th, 2022 10:56:41
-                </span>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td>
-                <h5 className="text-white text-right">jhgde8723gfwe9f934</h5>
-                <h5 className="text-gray-500  text-right">
-                  asdfawr23456ergs4356
-                </h5>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div className="flex flex-row justify-start items-center">
-                  <SiBitcoin className="color-warning text-2xl" />
-                  <span className="text-xl font-medium text-white ml-3">
-                    ETH
-                  </span>
-                </div>
-              </td>
-              <td>
-                <span className="text-sm font-extralight">
-                  Jan 17th, 2022 10:56:41
-                </span>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td>
-                <h5 className="text-white text-right">jhgde8723gfwe9f934</h5>
-                <h5 className="text-gray-500  text-right">
-                  asdfawr23456ergs4356
-                </h5>
+                </p>
               </td>
             </tr>
           </tbody>

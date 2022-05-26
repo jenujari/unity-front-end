@@ -1,6 +1,6 @@
 .dashbord--root {
   .banner-group {
-    @apply rounded-[64px];
+    @apply rounded-[42px];
     overflow: hidden;
 
     .img-banner {
@@ -26,6 +26,12 @@
       width: 88px;
       height: 88px;
       border-radius: 50%;
+    }
+
+    @include mob {
+      flex-direction: column;
+      justify-items: flex-start;
+      align-items: center;
     }
   }
 
@@ -85,6 +91,21 @@
         }
       }
     }
+  }
+}
+
+.Profilebar--root {
+  position: fixed;
+  top: 0;
+  right: -20%;
+  bottom: 0;
+  width: 20%;
+  color: white;
+  background-color: $dark-blue-two;
+  transition: all 0.5s ease-in-out;
+
+  &.open {
+    right: 0;
   }
 }
 

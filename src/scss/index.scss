@@ -31,14 +31,28 @@ body {
 }
 
 .Container--root {
-  @apply w-full h-full;
+  @apply h-full w-full;
   background-image: url(/images/5.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   .main-container {
-    @apply px-12 w-full;
+    @apply px-12;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    @include tab {
+      @apply px-4;
+      width: 100%;
+      margin: 0;
+    }
+
+    @include mob {
+      @apply px-4;
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 
@@ -51,4 +65,17 @@ body {
   padding-bottom: 32px;
   padding-left: 48px;
   padding-right: 48px;
+
+  @include mob {
+    padding: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+#root.light {
+  .card-container {
+    background-color: white;
+  }
 }

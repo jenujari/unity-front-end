@@ -2,6 +2,10 @@
   .qr_grid {
     grid-template-columns: 40% 60%;
 
+    @include mob {
+      grid-template-columns: 100%;
+    }
+
     .cell {
       border: 0.5px solid #2e364d;
     }
@@ -16,6 +20,20 @@
     color: white;
     font-size: 56px;
 
+    @include tab {
+      @apply rounded-2xl;
+      height: 96px;
+      width: 96px;
+      font-size: 68px;
+    }
+
+    @include mob {
+      @apply rounded-xl;
+      height: 44px;
+      width: 44px;
+      font-size: 16px;
+    }
+
     &:focus-visible,
     &:focus {
       outline: none;
@@ -23,6 +41,18 @@
 
     &:not(:placeholder-shown) {
       background-color: #ff6529;
+    }
+  }
+}
+
+#root.light {
+  .Authenticator-root {
+    .otp-box {
+      background-color: whitesmoke;
+
+      &:not(:placeholder-shown) {
+        background-color: #ff6529;
+      }
     }
   }
 }

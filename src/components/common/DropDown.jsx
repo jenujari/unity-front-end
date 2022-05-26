@@ -39,6 +39,7 @@ const Dropdown = ({
 
   const valSelect = useCallback(
     (idx) => {
+      // this is my edited file
       const opt = options[idx];
       setLocalValue(opt[val]);
       setOpen(false);
@@ -54,13 +55,13 @@ const Dropdown = ({
     if (value !== localvalue) onChange(localvalue);
   }, [localvalue]);
 
-  // onBlur={() => setOpen(false)}
   return (
     <div className="w-full">
       <button
         type="button"
-        className="w-full text-white text-xl bg-[#232531] rounded-xl shadow-md p-3"
+        className="w-full color-light  text-xl input-bg rounded-xl shadow-md p-3"
         ref={buttonRef}
+        onBlur={() => setOpen(false)}
         onClick={() => setOpen(!isOpen)}
       >
         {localvalue === "" && placeholder.length > 0 ? placeholder : localvalue}

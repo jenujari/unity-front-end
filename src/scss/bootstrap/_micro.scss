@@ -19,6 +19,22 @@
   color: #dbe1fe;
 }
 
+.input-bg {
+  background-color: #232531;
+}
+
+.section-title {
+  @apply text-4xl mb-12;
+
+  @include tab {
+    @apply text-3xl mb-8;
+  }
+
+  @include mob {
+    @apply text-2xl mb-6;
+  }
+}
+
 .popper-container {
   padding: 20px;
 
@@ -77,6 +93,7 @@
   color: #dbe1fe;
   border-collapse: separate;
   border-spacing: 0 32px;
+  table-layout: fixed;
 
   * {
     font-family: "Montserrat", sans-serif;
@@ -85,10 +102,14 @@
   thead {
     tr {
       th {
-        @apply px-8 pt-8;
+        @apply px-4 pt-4;
         color: #dbe1fe;
-        font-size: 22px;
+        font-size: 1rem;
       }
+    }
+
+    @include mob {
+      display: none;
     }
   }
 
@@ -100,9 +121,14 @@
       border-radius: 12px;
       overflow: hidden;
 
+      @include mob {
+        display: grid;
+        margin-bottom: 32px;
+      }
+
       td {
-        @apply p-8;
-        font-size: 22px;
+        @apply p-4;
+        font-size: 1rem;
         font-weight: bolder;
         background-color: $dark-blue-two;
 
@@ -116,12 +142,31 @@
           border-bottom-right-radius: 12px;
           overflow: hidden;
         }
+
+        @include mob {
+          @apply p-4 pt-12 relative;
+
+          &::before {
+            @apply absolute font-bold text-xl;
+            content: attr(data-title);
+            top: 8px;
+          }
+
+          &:first-child,
+          &:last-child {
+            border-radius: unset;
+          }
+        }
       }
 
       &:nth-child(even) {
         td {
           &:first-child {
             border-left: 3px solid #2596f3;
+
+            @include mob {
+              border-left: none;
+            }
           }
         }
       }
@@ -129,6 +174,9 @@
         td {
           &:first-child {
             border-left: 3px solid #f79e39;
+            @include mob {
+              border-left: none;
+            }
           }
         }
       }
@@ -139,6 +187,10 @@
 #root.light {
   .color-light {
     color: #1c1f26;
+  }
+
+  .input-bg {
+    background-color: #aab5f3;
   }
 
   .btn-tabs {

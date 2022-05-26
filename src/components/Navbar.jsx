@@ -39,14 +39,14 @@ function Navbar() {
         </div>
         <div className="right flex flex-row justify-end items-center">
           <CgArrowDownR className="text-xl color-light" />
-          <span
+          <button
             className="color-light text-base p-4 flex flex-row justify-between 
             items-center font-bold border border-blue-500 rounded-lg ml-8 cursor-pointer
-            font-montserrat"
+            font-montserrat btn-exchange"
           >
             Eng/USD
             <AiOutlinePlus className="ml-3" />
-          </span>
+          </button>
           <BsBell className="color-light text-3xl ml-8 cursor-pointer" />
           <div
             onClick={toggleThemeCb}

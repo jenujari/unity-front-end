@@ -3,6 +3,8 @@ import { SiBitcoin } from "react-icons/si";
 import { CgArrowLongRightE } from "react-icons/cg";
 import { BsThreeDotsVertical, BsChevronDown, BsArrowUp } from "react-icons/bs";
 
+import ProfileBar from "../components/Profilebar";
+
 import DashBanner01 from "./../static/images/dash_banner_1.jpg";
 
 function Home() {
@@ -14,6 +16,7 @@ function Home() {
       <SignupVerify />
       <CoinGrid />
       <TransactinTable />
+      <ProfileBar />
     </div>
   );
 }
@@ -36,7 +39,7 @@ const SignupVerify = () => {
           <div className="grad_border  mb-4"></div>
           <p
             style={{ lineHeight: "32px" }}
-            className="color-light font-montserrat text-lg font-bold"
+            className="color-light font-montserrat text-lg font-bold md:pr-4 lg:pr-0"
           >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
             quas perspiciatis ad atque qui similique laboriosam eum hic! Iste
@@ -44,7 +47,7 @@ const SignupVerify = () => {
             necessitatibus?
           </p>
         </div>
-        <div className="grid place-content-center ml-4 mr-12">
+        <div className="place-content-center ml-4 mr-12 hidden lg:grid">
           <div className="next-div grid place-content-center">
             <CgArrowLongRightE className="text-white text-4xl" />
           </div>
@@ -55,7 +58,7 @@ const SignupVerify = () => {
           <div className="grad_border  mb-4"></div>
           <p
             style={{ lineHeight: "32px" }}
-            className="color-light font-montserrat text-lg font-bold"
+            className="color-light font-montserrat text-lg font-bold  md:pr-4 lg:pr-0"
           >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
             quas perspiciatis ad atque qui similique laboriosam eum hic! Iste
@@ -63,7 +66,7 @@ const SignupVerify = () => {
             necessitatibus?
           </p>
         </div>
-        <div className="grid place-content-center ml-4 mr-12">
+        <div className="hidden lg:grid place-content-center ml-4 mr-12">
           <div className="next-div grid place-content-center">
             <CgArrowLongRightE className="text-white text-4xl" />
           </div>
@@ -74,7 +77,7 @@ const SignupVerify = () => {
           <div className="grad_border  mb-4"></div>
           <p
             style={{ lineHeight: "32px" }}
-            className="color-light font-montserrat text-lg font-bold"
+            className="color-light font-montserrat text-lg font-bold  md:pr-4 lg:pr-0"
           >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
             quas perspiciatis ad atque qui similique laboriosam eum hic! Iste
@@ -97,21 +100,21 @@ const CoinGrid = () => {
           <button className="btn-tabs">Trending</button>
           <button className="btn-tabs">Tools</button>
         </div>
-        <div className="right">
-          <button className="text-white font-roboto font-bold flex items-center">
+        <div className="right hidden sm:block">
+          <button className="color-light font-roboto font-bold flex items-center">
             Market Cap
             <BsChevronDown className="ml-2" />
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
         {[...Array(12).keys()].map((i) => (
           <div key={i} className="card">
             <div className="w-full font-roboto font-bold text-center text-3xl mt-12 color-light">
               <SiBitcoin className="icon-btc" />
               Bitcoin (BTC)
             </div>
-            <div className="w-full mt-[118px] mb-[68px] grid place-items-center">
+            <div className="w-full my-[68px] grid place-items-center">
               <p className="txt-bull font-roboto">
                 +9.06%
                 <BsArrowUp className="ml-1" />
@@ -152,11 +155,35 @@ const TransactinTable = () => {
         </thead>
         <tbody>
           <tr>
-            <td>Withdraw BTC</td>
-            <td>15 May 2016</td>
-            <td>0.12340000 BTC</td>
-            <td>
-              <h5 className="text-white">jhgde8723gfwe9f934</h5>
+            <td data-title="Type">Withdraw BTC</td>
+            <td data-title="Date">15 May 2016</td>
+            <td data-title="Amount">0.12340000 BTC</td>
+            <td data-title="Address/Transactions">
+              <h5 className="color-light">jhgde8723gfwe9f934</h5>
+              <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
+            </td>
+            <td data-title=" ">
+              <BsThreeDotsVertical className="text-white" />
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Type">Withdraw BTC</td>
+            <td data-title="Date">15 May 2016</td>
+            <td data-title="Amount">0.12340000 BTC</td>
+            <td data-title="Address/Transactions">
+              <h5 className="color-light">jhgde8723gfwe9f934</h5>
+              <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
+            </td>
+            <td data-title=" ">
+              <BsThreeDotsVertical className="text-white" />
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Type">Withdraw BTC</td>
+            <td data-title="Date">15 May 2016</td>
+            <td data-title="Amount">0.12340000 BTC</td>
+            <td data-title="Address/Transactions">
+              <h5 className="color-light">jhgde8723gfwe9f934</h5>
               <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
             </td>
             <td>
@@ -164,11 +191,11 @@ const TransactinTable = () => {
             </td>
           </tr>
           <tr>
-            <td>Withdraw BTC</td>
-            <td>15 May 2016</td>
-            <td>0.12340000 BTC</td>
-            <td>
-              <h5 className="text-white">jhgde8723gfwe9f934</h5>
+            <td data-title="Type">Withdraw BTC</td>
+            <td data-title="Date">15 May 2016</td>
+            <td data-title="Amount">0.12340000 BTC</td>
+            <td data-title="Address/Transactions">
+              <h5 className="color-light">jhgde8723gfwe9f934</h5>
               <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
             </td>
             <td>
@@ -176,11 +203,11 @@ const TransactinTable = () => {
             </td>
           </tr>
           <tr>
-            <td>Withdraw BTC</td>
-            <td>15 May 2016</td>
-            <td>0.12340000 BTC</td>
-            <td>
-              <h5 className="text-white">jhgde8723gfwe9f934</h5>
+            <td data-title="Type">Withdraw BTC</td>
+            <td data-title="Date">15 May 2016</td>
+            <td data-title="Amount">0.12340000 BTC</td>
+            <td data-title="Address/Transactions">
+              <h5 className="color-light">jhgde8723gfwe9f934</h5>
               <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
             </td>
             <td>
@@ -188,11 +215,11 @@ const TransactinTable = () => {
             </td>
           </tr>
           <tr>
-            <td>Withdraw BTC</td>
-            <td>15 May 2016</td>
-            <td>0.12340000 BTC</td>
-            <td>
-              <h5 className="text-white">jhgde8723gfwe9f934</h5>
+            <td data-title="Type">Withdraw BTC</td>
+            <td data-title="Date">15 May 2016</td>
+            <td data-title="Amount">0.12340000 BTC</td>
+            <td data-title="Address/Transactions">
+              <h5 className="color-light">jhgde8723gfwe9f934</h5>
               <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
             </td>
             <td>
@@ -200,35 +227,11 @@ const TransactinTable = () => {
             </td>
           </tr>
           <tr>
-            <td>Withdraw BTC</td>
-            <td>15 May 2016</td>
-            <td>0.12340000 BTC</td>
-            <td>
-              <h5 className="text-white">jhgde8723gfwe9f934</h5>
-              <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
-            </td>
-            <td>
-              <BsThreeDotsVertical className="text-white" />
-            </td>
-          </tr>
-          <tr>
-            <td>Withdraw BTC</td>
-            <td>15 May 2016</td>
-            <td>0.12340000 BTC</td>
-            <td>
-              <h5 className="text-white">jhgde8723gfwe9f934</h5>
-              <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
-            </td>
-            <td>
-              <BsThreeDotsVertical className="text-white" />
-            </td>
-          </tr>
-          <tr>
-            <td>Withdraw BTC</td>
-            <td>15 May 2016</td>
-            <td>0.12340000 BTC</td>
-            <td>
-              <h5 className="text-white">jhgde8723gfwe9f934</h5>
+            <td data-title="Type">Withdraw BTC</td>
+            <td data-title="Date">15 May 2016</td>
+            <td data-title="Amount">0.12340000 BTC</td>
+            <td data-title="Address/Transactions">
+              <h5 className="color-light">jhgde8723gfwe9f934</h5>
               <h5 className="text-gray-500">asdfawr23456ergs4356</h5>
             </td>
             <td>

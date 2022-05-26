@@ -36,27 +36,27 @@ const Authenticator = () => {
 
   return (
     <div className="Authenticator-root main-container w-full">
-      <h3 className="color-light text-4xl font-bold mb-12">Scan Code</h3>
+      <h3 className="color-light section-title font-bold">Scan Code</h3>
       <div className="card-container mb-12">
         <div className="grid qr_grid gap-4">
           <div className="cell p-4 rounded-xl grid place-content-center">
             <img src={QR} alt="QR" className="img-qr" />
           </div>
           <div className="cell p-4 px-8 rounded-xl">
-            <p className="text-white text-sm">
+            <p className="color-light text-sm">
               If you want to turn on 2FA, use Google Authenticator app to scan
               code, then enter six-digit code provided by the app to the form
               below.
             </p>
             <div className="grid place-content-center mt-8">
-              <button className="rounded py-3 w-48 text-white bg-[#47c17a]">
+              <button className="rounded py-3 w-48 color-light  bg-[#47c17a]">
                 Download 2FA App
               </button>
             </div>
           </div>
         </div>
       </div>
-      <h3 className="color-light text-4xl font-bold mb-12">
+      <h3 className="color-light section-title font-bold">
         Enter Six-Digit Code
       </h3>
       <div className="card-container mb-12">

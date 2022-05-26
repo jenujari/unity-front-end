@@ -5,11 +5,11 @@ import { Input } from "./../components/common";
 const Profile = () => {
   return (
     <div className="Profile-root main-container w-full">
-      <h3 className="color-light text-4xl font-bold mb-12">Your Avatar</h3>
+      <h3 className="color-light  section-title  font-bold ">Your Avatar</h3>
       <div className="card-container mb-12">
         <div className="flex justify-start items-center">
-          <div className="rounded-full w-40 h-40 bg-blue-700"></div>
-          <button className="p-4 w-40 ml-8 font-bold rounded-lg border border-[#3f43dd] text-white">
+          <div className="rounded-full w-20 h-20 bg-blue-700"></div>
+          <button className="p-4 w-40 ml-8 font-bold rounded-lg border border-[#3f43dd] color-light">
             Withdraw
           </button>
           <button className="p-4 w-40 ml-8 font-bold rounded-lg bg-[#535353] text-white">
@@ -17,25 +17,27 @@ const Profile = () => {
           </button>
         </div>
       </div>
-      <h3 className="color-light text-4xl font-bold mb-12">Your Details</h3>
+      <h3 className="color-light  section-title font-bold ">Your Details</h3>
       <div className="card-container mb-12">
-        <div className="grid grid-cols-2 gap-x-4 gap-y-10">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10">
           <div>
-            <label className="text-white text-lg font-bold">
+            <label className="color-light text-lg font-bold">
               Your Full Name
             </label>
             <Input className="mt-5" />
           </div>
           <div>
-            <label className="text-white text-lg font-bold">Display Name</label>
+            <label className="color-light text-lg font-bold">
+              Display Name
+            </label>
             <Input className="mt-5" />
           </div>
           <div>
-            <label className="text-white text-lg font-bold">Email</label>
+            <label className="color-light text-lg font-bold">Email</label>
             <Input className="mt-5" />
           </div>
           <div>
-            <label className="text-white text-lg font-bold">Location</label>
+            <label className="color-light text-lg font-bold">Location</label>
             <Input className="mt-5" />
           </div>
           <div>

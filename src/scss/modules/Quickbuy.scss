@@ -9,7 +9,7 @@
     }
 
     .icon-search {
-      @apply text-white absolute text-xl top-4 right-4;
+      @apply absolute text-xl top-4 right-4;
     }
   }
 
@@ -29,11 +29,11 @@
       }
 
       .txt-amt {
-        @apply text-white font-extrabold text-2xl;
+        @apply font-extrabold text-2xl;
       }
 
       .txt-label {
-        @apply text-white text-xs mt-4;
+        @apply text-xs mt-4;
       }
 
       .action-grp {
@@ -66,6 +66,46 @@
               background-color: #23ae79;
               .font-bold {
                 color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#root.light {
+  .Quickbuy-root {
+    .search-grp {
+      .txt-search {
+        background-color: #fff;
+      }
+    }
+
+    .grid {
+      .card {
+        background-color: #fff;
+
+        .action-grp {
+          button {
+            background-color: rgb(216, 216, 216);
+            color: #1c1f26;
+
+            &.buy {
+              &:hover {
+                background-color: #f6614e;
+                .font-bold {
+                  color: white;
+                }
+              }
+            }
+            &.sell {
+              &:hover {
+                background-color: #23ae79;
+                .font-bold {
+                  color: white;
+                }
               }
             }
           }

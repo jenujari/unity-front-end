@@ -53,3 +53,14 @@
     @apply font-bold text-xl;
   }
 }
+
+#root.light {
+  .Wallet--root {
+    .balances {
+      .cst-btn.btn-border {
+        border-color: #1c1f26;
+        color: #1c1f26;
+      }
+    }
+  }
+}

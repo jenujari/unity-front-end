@@ -18,8 +18,8 @@ export default Wallet;
 const WalletOverview = ({}) => {
   return (
     <>
-      <h3 className="color-light font-bold text-3xl mb-5">Overview</h3>
-      <div className="card-container flex flex-row justify-between mb-12">
+      <h3 className="color-light font-bold  section-title ">Overview</h3>
+      <div className="card-container flex flex-col md:flex-row md:justify-between mb-12">
         <div className="left">
           <h6 className="color-light text-md">Total Balance</h6>
           <h3 className="color-light text-4xl font-bold mt-3 inline-flex">
@@ -30,11 +30,13 @@ const WalletOverview = ({}) => {
           </h3>
           <h6 className="green-usd mt-2">3,700.96 USD</h6>
         </div>
-        <div className="right self-center">
-          <div className="flex flex-row">
+        <div className="right self-center w-full md:w-auto mt-8 md:mt-0">
+          <div className="flex flex-col justify-start items-start md:flex-row">
             <button className="cst-btn bg-danger mr-7">Withdraw</button>
-            <button className="cst-btn bg-success  mr-7">Deposit</button>
-            <button className="cst-btn bg-info">Convert</button>
+            <button className="cst-btn mt-8 md:mt-0 bg-success  mr-7">
+              Deposit
+            </button>
+            <button className="cst-btn mt-8 md:mt-0 bg-info">Convert</button>
           </div>
         </div>
       </div>
@@ -45,7 +47,9 @@ const WalletOverview = ({}) => {
 const AccountBalance = ({}) => {
   return (
     <>
-      <h3 className="color-light font-bold text-3xl mb-5">Account Balances</h3>
+      <h3 className="color-light font-bold  section-title ">
+        Account Balances
+      </h3>
       <div className="card-container mb-12">
         <div className="balances grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="card-block balance-margin">
@@ -55,7 +59,7 @@ const AccountBalance = ({}) => {
               </span>
               Margin
             </h3>
-            <h5 className="text-white text-right font-bold text-2xl">
+            <h5 className="color-light text-right font-bold text-2xl">
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
@@ -71,7 +75,7 @@ const AccountBalance = ({}) => {
               </span>
               Flat and Spot
             </h3>
-            <h5 className="text-white text-right font-bold text-2xl">
+            <h5 className="color-light text-right font-bold text-2xl">
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
@@ -87,7 +91,7 @@ const AccountBalance = ({}) => {
               </span>
               P2P
             </h3>
-            <h5 className="text-white text-right font-bold text-2xl">
+            <h5 className="color-light text-right font-bold text-2xl">
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
@@ -103,7 +107,7 @@ const AccountBalance = ({}) => {
               </span>
               Futures
             </h3>
-            <h5 className="text-white text-right font-bold text-2xl">
+            <h5 className="color-light text-right font-bold text-2xl">
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
@@ -121,7 +125,7 @@ const AccountBalance = ({}) => {
 const AssetBalance = ({}) => {
   return (
     <>
-      <h3 className="color-light font-bold text-3xl mb-5">Asset Balances</h3>
+      <h3 className="color-light font-bold  section-title ">Asset Balances</h3>
       <div className="card-container mb-12">
         <table className="tbl w-full">
           <thead>
@@ -146,7 +150,7 @@ const AssetBalance = ({}) => {
                 </span>
               </td>
               <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
+                <h5 className="color-light text-right font-bold text-2xl">
                   0.2785689852 BTC
                 </h5>
                 <h5 className="text-gray-500 text-right text-xl">
@@ -154,7 +158,7 @@ const AssetBalance = ({}) => {
                 </h5>
               </td>
               <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
+                <h5 className="color-light text-right font-bold text-2xl">
                   0.2785689852 BTC
                 </h5>
                 <h5 className="text-gray-500 text-right text-xl">
@@ -162,7 +166,7 @@ const AssetBalance = ({}) => {
                 </h5>
               </td>
               <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
+                <h5 className="color-light text-right font-bold text-2xl">
                   0.2785689852 BTC
                 </h5>
                 <h5 className="text-gray-500 text-right text-xl">
@@ -181,7 +185,7 @@ const AssetBalance = ({}) => {
                 </span>
               </td>
               <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
+                <h5 className="color-light text-right font-bold text-2xl">
                   0.2785689852 BTC
                 </h5>
                 <h5 className="text-gray-500 text-right text-xl">
@@ -189,7 +193,7 @@ const AssetBalance = ({}) => {
                 </h5>
               </td>
               <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
+                <h5 className="color-light text-right font-bold text-2xl">
                   0.2785689852 BTC
                 </h5>
                 <h5 className="text-gray-500 text-right text-xl">
@@ -197,7 +201,7 @@ const AssetBalance = ({}) => {
                 </h5>
               </td>
               <td className="text-right">
-                <h5 className="text-white text-right font-bold text-2xl">
+                <h5 className="color-light text-right font-bold text-2xl">
                   0.2785689852 BTC
                 </h5>
                 <h5 className="text-gray-500 text-right text-xl">

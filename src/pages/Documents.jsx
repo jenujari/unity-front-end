@@ -11,15 +11,15 @@ const drpOptions = [
 export default function Documents() {
   return (
     <div className="main-container Documents--root w-full">
-      <h3 className="color-light text-4xl font-bold mb-12">My Documents</h3>
+      <h3 className="color-light  section-title  font-bold ">My Documents</h3>
       <div className="card-container mb-12">
         <div className="h-48 grid items-center wi-full">
-          <p className="text-white text-center italic font-light">
+          <p className="color-light text-center italic font-light">
             No Documents uploaded
           </p>
         </div>
       </div>
-      <h3 className="color-light text-4xl font-bold mb-12">
+      <h3 className="color-light  section-title  font-bold ">
         Upload New Document
       </h3>
       <div className="w-full grid docfrom-grid gap-3 mb-12">
@@ -27,51 +27,51 @@ export default function Documents() {
           <div className="btn-drp-grp mb-12">
             <Dropdown options={drpOptions} placeholder="Please Select" />
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col justify-start items-center">
-              <button className="text-white px-6 py-4 w-48 rounded-xl bg-[#ff6529]">
+              <button className="color-light px-6 py-4 w-48 rounded-xl bg-[#ff6529]">
                 Front Side
               </button>
               <button className="btn-upload">Upload</button>
             </div>
             <div className="flex flex-col justify-start items-center">
-              <button className="text-white px-6 py-4 w-48 rounded-xl bg-[#47c27b]">
+              <button className="color-light px-6 py-4 w-48 rounded-xl bg-[#47c27b]">
                 Back Side
               </button>
               <button className="btn-upload">Upload</button>
             </div>
           </div>
           <div className="optional_form mt-12">
-            <h3 className="text-white text-xl font-bold mb-8">
+            <h3 className="color-light text-xl font-bold mb-8">
               Fill in your details for seamleass expiriance. (Optional)
             </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-10">
               <div>
-                <label className="text-white text-lg font-bold">
+                <label className="color-light text-lg font-bold">
                   Document Number
                 </label>
                 <Input className="mt-5" />
               </div>
               <div>
-                <label className="text-white text-lg font-bold">
+                <label className="color-light text-lg font-bold">
                   Country of Issue
                 </label>
                 <Input className="mt-5" />
               </div>
               <div>
-                <label className="text-white text-lg font-bold">
+                <label className="color-light text-lg font-bold">
                   Date of Issue
                 </label>
                 <Input className="mt-5" />
               </div>
               <div>
-                <label className="text-white text-lg font-bold">
+                <label className="color-light text-lg font-bold">
                   Date of Expiry
                 </label>
                 <Input className="mt-5" />
               </div>
               <div>
-                <p className="text-white italic text-sm">
+                <p className="color-light italic text-sm">
                   (Maximum size of document 5mb) Allowed file format *.jpg,
                   *.png, *.pdf
                 </p>
@@ -84,27 +84,27 @@ export default function Documents() {
             </div>
           </div>
         </div>
-        <div className="card-container p-4">
-          <h3 className="text-white text-center font-bold text-lg mb-12">
+        <div className="card-container right-container">
+          <h3 className="color-light text-center font-bold text-lg mb-12">
             KYC Requirements
           </h3>
           <ul className="req_list">
-            <li className="itm">
+            <li className="itm color-light">
               <span className="doc-ico">
-                <IoDocumentsSharp className="text-white text-center inline-block" />
+                <IoDocumentsSharp className="color-light text-center inline-block" />
               </span>
               <span>Proof of ID</span>
             </li>
-            <li className="itm">
+            <li className="itm color-light">
               <span className="doc-ico">
-                <IoDocumentsSharp className="text-white text-center inline-block" />
+                <IoDocumentsSharp className="color-light text-center inline-block" />
               </span>
               <span>Proof of Address</span>
             </li>
           </ul>
         </div>
       </div>
-      <h3 className="color-light text-4xl font-bold mb-12">
+      <h3 className="color-light  section-title  font-bold ">
         Uploaded Documents
       </h3>
       <div className="card-container mb-12">
