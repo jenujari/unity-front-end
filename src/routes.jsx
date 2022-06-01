@@ -1,6 +1,9 @@
 import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { toggleSidebar, toggleProfileBar } from "./store/features/layout";
+import { useWindowSize } from "./utils/hooks";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Wallet = React.lazy(() => import("./pages/Wallet"));
@@ -12,7 +15,9 @@ const Authenticator = React.lazy(() => import("./pages/2fa"));
 const Profile = React.lazy(() => import("./pages/Profile"));
 
 const Routee = () => {
+  const dispatch = useDispatch();
   const isDarkTheme = useSelector((state) => state.layout.darkTheme);
+  const [screenWidth] = useWindowSize();
 
   useEffect(() => {
     const rootEle = document.getElementById("root");
@@ -26,6 +31,16 @@ const Routee = () => {
       }
     }
   }, [isDarkTheme]);
+
+  useEffect(() => {
+    if (window.screen.availWidth > 1200) {
+      dispatch(toggleSidebar(true));
+      dispatch(toggleProfileBar(true));
+    } else {
+      dispatch(toggleSidebar(false));
+      dispatch(toggleProfileBar(false));
+    }
+  }, [screenWidth]);
 
   return (
     <Routes>

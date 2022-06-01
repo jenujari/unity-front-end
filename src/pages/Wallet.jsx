@@ -63,8 +63,8 @@ const AccountBalance = ({}) => {
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
-            <div className="flex flex-row justify-center mt-4">
-              <button className="cst-btn btn-border mr-5">Deposit</button>
+            <div className="grid w-full gap-4 place-content-center mt-4">
+              <button className="cst-btn btn-border">Deposit</button>
               <button className="cst-btn btn-border">Transfer</button>
             </div>
           </div>
@@ -79,8 +79,8 @@ const AccountBalance = ({}) => {
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
-            <div className="flex flex-row justify-center mt-4">
-              <button className="cst-btn btn-border mr-5">Deposit</button>
+            <div className="grid w-full gap-4 place-content-center mt-4">
+              <button className="cst-btn btn-border">Deposit</button>
               <button className="cst-btn btn-border">Transfer</button>
             </div>
           </div>
@@ -95,8 +95,8 @@ const AccountBalance = ({}) => {
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
-            <div className="flex flex-row justify-center mt-4">
-              <button className="cst-btn btn-border mr-5">Deposit</button>
+            <div className="grid w-full gap-4 place-content-center mt-4">
+              <button className="cst-btn btn-border">Deposit</button>
               <button className="cst-btn btn-border">Transfer</button>
             </div>
           </div>
@@ -111,8 +111,8 @@ const AccountBalance = ({}) => {
               0.2785689852 BTC
             </h5>
             <h5 className="text-muted text-right text-xl">10,098.36 USD</h5>
-            <div className="flex flex-row justify-center mt-4">
-              <button className="cst-btn btn-border mr-5">Deposit</button>
+            <div className="grid w-full gap-4 place-content-center mt-4">
+              <button className="cst-btn btn-border">Deposit</button>
               <button className="cst-btn btn-border">Transfer</button>
             </div>
           </div>
@@ -130,81 +130,76 @@ const AssetBalance = ({}) => {
         <table className="tbl w-full">
           <thead>
             <tr>
-              <th>&nbsp;</th>
+              <th>Fav</th>
               <th className="text-left">Asset</th>
               <th className="text-left">Earn</th>
-              <th className="text-right">On Orders</th>
               <th className="text-right">Available Balance</th>
               <th className="text-right">Total Balance</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td data-title="Fav">
                 <AiFillStar />
               </td>
-              <td>USDT</td>
-              <td>
+              <td data-title="Asset">USDT</td>
+              <td data-title="Earn">
                 <span className="py-2 px-6 bg-success rounded-lg">
                   7.46% APR
                 </span>
               </td>
-              <td className="text-right">
-                <h5 className="color-light text-right font-bold text-2xl">
+              <td
+                className="text-left md:text-right"
+                data-title="Available Balance"
+              >
+                <h5 className="color-light text-left md:text-right font-bold text-xl">
                   0.2785689852 BTC
                 </h5>
-                <h5 className="text-gray-500 text-right text-xl">
+                <h5 className="text-gray-500 text-left md:text-right text-xl">
                   10,098.36 USD
                 </h5>
               </td>
-              <td className="text-right">
-                <h5 className="color-light text-right font-bold text-2xl">
+              <td
+                className="text-left md:text-right"
+                data-title="Total Balance"
+              >
+                <h5 className="color-light text-left md:text-right font-bold text-xl">
                   0.2785689852 BTC
                 </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td className="text-right">
-                <h5 className="color-light text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
+                <h5 className="text-gray-500 text-left md:text-right text-xl">
                   10,098.36 USD
                 </h5>
               </td>
             </tr>
             <tr>
-              <td>
+              <td data-title="Fav">
                 <AiOutlineStar />
               </td>
-              <td>ETH</td>
-              <td>
+              <td data-title="Asset">ETH</td>
+              <td data-title="Earn">
                 <span className="py-2 px-6 bg-success rounded-lg">
                   7.46% APR
                 </span>
               </td>
-              <td className="text-right">
-                <h5 className="color-light text-right font-bold text-2xl">
+              <td
+                className="text-left md:text-right"
+                data-title="Available Balance"
+              >
+                <h5 className="color-light text-left md:text-right font-bold text-xl">
                   0.2785689852 BTC
                 </h5>
-                <h5 className="text-gray-500 text-right text-xl">
+                <h5 className="text-gray-500 text-left md:text-right text-xl">
                   10,098.36 USD
                 </h5>
               </td>
-              <td className="text-right">
-                <h5 className="color-light text-right font-bold text-2xl">
+              <td
+                className="text-left md:text-right"
+                data-title="Total Balance"
+              >
+                <h5 className="color-light text-left md:text-right font-bold text-xl">
                   0.2785689852 BTC
                 </h5>
-                <h5 className="text-gray-500 text-right text-xl">
-                  10,098.36 USD
-                </h5>
-              </td>
-              <td className="text-right">
-                <h5 className="color-light text-right font-bold text-2xl">
-                  0.2785689852 BTC
-                </h5>
-                <h5 className="text-gray-500 text-right text-xl">
+                <h5 className="text-gray-500 text-left md:text-right text-xl">
                   10,098.36 USD
                 </h5>
               </td>

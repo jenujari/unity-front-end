@@ -6,7 +6,11 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { BsBell, BsChevronDown } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 
-import { toggleSidebar, toggleTheme } from "../store/features/layout";
+import {
+  toggleSidebar,
+  toggleTheme,
+  toggleProfileBar,
+} from "../store/features/layout";
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -19,6 +23,10 @@ function Navbar() {
   );
 
   const toggleThemeCb = React.useCallback(() => dispatch(toggleTheme()), []);
+  const toggleProfilebarCb = React.useCallback(
+    () => dispatch(toggleProfileBar()),
+    []
+  );
 
   return (
     <div className="Navbar--root">
@@ -38,7 +46,10 @@ function Navbar() {
           </div>
         </div>
         <div className="right flex flex-row justify-end items-center">
-          <CgArrowDownR className="text-xl color-light" />
+          <CgArrowDownR
+            onClick={toggleProfilebarCb}
+            className="text-xl color-light cursor-pointer"
+          />
           <button
             className="color-light text-base p-4 flex flex-row justify-between 
             items-center font-bold border border-blue-500 rounded-lg ml-8 cursor-pointer

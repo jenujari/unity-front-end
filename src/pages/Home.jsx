@@ -110,7 +110,7 @@ const CoinGrid = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
         {[...Array(12).keys()].map((i) => (
           <div key={i} className="card">
-            <div className="w-full font-roboto font-bold text-center text-3xl mt-12 color-light">
+            <div className="w-full font-roboto font-bold text-center text-2xl mt-12 color-light">
               <SiBitcoin className="icon-btc" />
               Bitcoin (BTC)
             </div>
